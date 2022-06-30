@@ -1,0 +1,16 @@
+    {% extends 'szablon.html' %}
+
+    {% block oferta %}
+
+     {% if oferta_user %}
+            <h1> {{ oferta_user.nazwa }}</h1>
+            <p> Korepetytor: {{ oferta_user.korepetytor }} </p>
+            <p> Opis: {{ oferta_user.opis}} </p>
+            <p> Cena: {{ oferta_user.cena}} </p>
+
+      {% else %}
+            <p>Nie ma oferty o takim id.</p>
+
+      {% endif %}
+
+      {% endblock oferta %}

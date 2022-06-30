@@ -1,0 +1,30 @@
+<div>
+        <h1 style="text-align:center"> Witaj w naszym serwisie ! </h1><br>
+            <img scr="Ogloszenia_korepetycje/Oferty/templates/dl2z.jpg"/>
+
+        <div style="text-align:center; border:2px solid black;">
+         <p>Login:</p>
+        <input type="text"></input><br>
+         <p>Hasło:</p>
+         <input type="password"></input><br><br>
+
+          <button>Zaloguj</button>
+            </div>
+
+    <div style="clear:both"></div>
+    <div style="width:200px; float: left">
+        <h3> MENU </h3>
+        <h4>Wybierz poziom:</h4>
+     {% for poz in poziomy %}
+        <p><a href = "/poziom/{{ poz.id }}"> {{ poz.nazwa }} </a> </p>
+
+     {% endfor %}
+    </div>
+
+    <div style="width:700; float:left">
+        {% block oferta %}
+
+        {% endblock oferta %}
+    </div>
+
+</div>

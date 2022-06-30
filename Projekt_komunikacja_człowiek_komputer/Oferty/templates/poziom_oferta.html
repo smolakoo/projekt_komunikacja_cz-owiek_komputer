@@ -1,0 +1,16 @@
+    {% extends 'szablon.html' %}
+
+      {% block oferta %}
+
+        {% if poziom_oferta %}
+
+          {% for oferta in poziom_oferta %}
+
+            <p><a href="/oferta/{{ oferta.id }}/"> {{ oferta.nazwa }} </a></p>
+          {% endfor %}
+
+        {% else %}
+
+        {% endif %}
+
+      {% endblock %}
